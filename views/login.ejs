@@ -1,0 +1,22 @@
+<div class="page">
+
+  <div class="center-box">
+    <div>Log in</div>
+    <input type="password" id="<%- handlers.tokenInput.fields.token %>" placeholder="Token">
+    <select id="tokenSelect" onchange="setTokenField()">
+        <option id="label">Alternate accounts</option>
+      <% for (id in logins) { %>
+        <option   value="<%= logins[id].token %>" <%= locals.lastLogin && id == lastLogin ? 'selected="true"' : '' %>><%= logins[id].tag %></option>
+      <% } %>
+     </select>
+    <input type="button" id="<%- handlers.tokenInput.id %>" value="AUTHORIZE">
+  </div>
+</div>
+
+<script>
+setTokenField()
+function setTokenField()
+{
+  document.getElementById("<%- handlers.tokenInput.fields.token %>").value = document.getElementById('tokenSelect').value
+}
+</script>

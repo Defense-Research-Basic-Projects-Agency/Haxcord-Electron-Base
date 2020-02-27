@@ -1,0 +1,50 @@
+html {
+  display: flex;
+  font-family: Helvetica;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+
+  word-break: break-word;
+  min-width: 200px;
+}
+body {
+  display: flex;
+  flex-direction: column;;
+  margin: 0;
+  padding: 0;
+
+
+  width: 100%;
+  height: 100%;
+
+  background: #0b0a0b;
+  border-color: #fce6ff;
+  color: #fce6ff;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-box {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  border-style: solid;
+  border-width: 1px;
+  padding: 12px;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
